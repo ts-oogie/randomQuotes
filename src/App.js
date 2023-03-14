@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import  QuoteBox from './components/quoteBox' 
+import {useEffect, useState} from 'react'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+
+  const [winWidth, setWinWidth] = useState(0)
+  const [winHeight, setWinHeight] = useState(0)
+  const [num, setNum] = useState(Math.floor(Math.random() * (6 - 0) + 0)) 
+
+  const [quote, setQuote] = useState(null)
+  const [author, setAuthor] = useState(null)
+
+  const appStyle = {
+    width: winWidth,
+    height: winHeight 
+  }
+
+  useEffect(()=>{
+    setWinWidth(window.innerWidth)
+    setWinHeight(window.innerHeight)  
+  }) 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={appStyle} >
+       <QuoteBox 
+          winWidth={winWidth}
+          winHeight={winHeight} 
+          setNum={setNum} 
+          num={num} 
+          setQuote={setQuote} 
+          setAuthor={setAuthor}
+          quote={quote}
+          author={author}
+        /> 
     </div>
   );
-}
+} 
 
 export default App;
