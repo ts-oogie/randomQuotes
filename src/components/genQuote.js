@@ -15,12 +15,11 @@ const GenQuote = ({setNum}) => {
         height: "50px",
         width: "100px",
         float: "right",
-        color: "white",
-        paddingTop: "14px",
-        borderRadius: "5px",
-        marginTop: "100px",
-        display: "inline", 
-        marginRight: "-150px"
+        color: "white", 
+        borderRadius: "5px", 
+        margin: "0 auto", 
+        marginRight: "25%",
+        marginTop: "15%"
     }
 
     const handleClick = () => { 

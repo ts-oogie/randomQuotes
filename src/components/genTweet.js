@@ -6,18 +6,18 @@ const GenTweet = ({author, quote}) => {
     const [thisAuthor, setThisAuthor] = useState(null)
     const [thisQuote, setThisQuote] = useState(null)
 
-    const tweetStyle = { 
-            backgroundColor: "white",
-            height: "50px",
-            width: "100px",
-            float: "right",
-            color: "black",
-            paddingTop: "14px",
-            borderRadius: "5px",
-            marginTop: "100px",
-            display: "inline", 
-            marginRight: "500px" 
+    const tweetStyle = {
+        backgroundColor: "white",
+        height: "50px",
+        width: "100px",
+        float: "left",
+        color: "black", 
+        borderRadius: "5px", 
+        margin: "0 auto", 
+        marginLeft: "25%",
+        marginTop: "15%"
     }
+
 
     useEffect(() => {
         setThisAuthor(author)
